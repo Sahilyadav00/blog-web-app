@@ -1,0 +1,18 @@
+<html>
+   <body>
+      {% load static %}
+      {% include 'afterlogin.html' %}
+      {% block head %}
+      {% endblock %}
+
+      {% for i in objs %}
+      <center><h1>{{i.title}}</h1></center>
+      <center><p>{{i.post}}</p></center>
+      <center><h3>{{i.category}}</h3></center>
+      <center><h5>{{i.author}}</h5></center>
+      <center><img src="/{{i.file}}" height="30%" width="30%"></center>
+      <hr>
+      {% endfor %}
+
+   </body>
+</html>
